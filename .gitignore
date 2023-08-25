@@ -1,3 +1,5 @@
 *.exe
 *.vscode
 *tempCodeRunnerFile.c
+*practice.c
+*swap_using_pointers_func.c
