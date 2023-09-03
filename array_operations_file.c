@@ -54,7 +54,7 @@ int main() {
         }
     }
 
-
+/*
     int b,m,e,item3;
     b=0;e=n;m=(b+e)/2;
     for(int i=0; i<=n && a[m]!=item3;i++) {
