@@ -30,7 +30,7 @@ int main() {
     for(int i=0;i<n;i++){
         printf("%d ",a[i]);
     }
-*/
+
     int k1;
     
     printf("enter desired position to delete: ");
@@ -54,18 +54,23 @@ int main() {
         }
     }
 
-/*
-    int b,m,e,item3;
-    b=0;e=n;m=(b+e)/2;
-    for(int i=0; i<=n && a[m]!=item3;i++) {
+*/
+    int b,m,e,item3,index;
+    b=0;e=n-1;m=(b+e)/2;
+    printf("enter item to be search: ");
+    scanf("%d",&item3);
+    for(int i=0; i<=n && a[m]!=item3; i++) {
         if (item3 < a[m]) {
             e=m-1;
         }
-        else 
+        else {
             b=m+1;
+        }
+        m = (int)(b+e)/2;
     }
-    if (a[m]=item3) {
+    if (a[m]==item3){
+        printf("Element found at index: %d",m);
     }
-*/
+   
     return 0;
 }
