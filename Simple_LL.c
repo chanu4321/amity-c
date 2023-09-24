@@ -10,9 +10,9 @@ struct node
 
 int main()
 {
-    int ch; char ins;
+    int ch; char ins,del;
     struct node *start = NULL;
-    struct node *nn,*temp;
+    struct node *nn,*temp,*save;
     int d,k,pos;
     while (1) {
     printf("Operations on Unsorted Linked List \n \n Press 1 to Insert \n Press 2 to Delete \n Press 3 to Search \n Press 4 to Traverse(Print) \n Press 5 to exit \n");
@@ -70,6 +70,45 @@ int main()
     else if (ch == 2)
     {
         printf(" A: Delete using location \n B: Delete using data value \n ");
+        fflush(stdin);
+        del=getchar();
+        switch (del)
+        {
+        case 'A':
+            
+            break;
+        
+        case 'B':
+            if (start==NULL){
+                printf("list is empty");
+                break;
+            }
+            scanf("%d", &d);
+            if (start->data==d){
+                temp=start;
+                start=start->next;
+                free(temp);
+                break;
+            }
+            save=start;
+            temp=start->next;
+            while(temp!=NULL){
+                if(temp->data==d){
+                    save->next=temp->next;
+                    free(temp);
+                    printf("Node deleted");
+                    break;
+                }
+                else {
+                    save=temp;
+                    temp=temp->next;
+                }
+            }
+            if (temp==NULL){
+                printf("data not in list");
+            }
+            break;
+        }
     }
     }
     return 0;
