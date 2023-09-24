@@ -153,8 +153,18 @@ int main()
             }
             break;
         case 3:
-            
+            scanf("%d",&d);
+            for(temp=start,pos=0;temp!=NULL;temp=temp->next,pos++) {
+                if(temp->data==d) {
+                    printf("data found at location %d", pos);
+                    break;
+                }
+            }
+            if(temp==NULL){
+                printf("data not found");
+            }
             break;
+
         case 4:
             if (start == NULL)
             {
@@ -166,6 +176,9 @@ int main()
                 printf("%d\n", temp->data);
             }
             break;
+
+        case 5:
+            exit(0);
         }
     }
     return 0;
