@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 int main() {
     int n;
     printf("Enter the max no. of queue elements: ");
@@ -16,7 +17,7 @@ int main() {
         switch (stk) {
             case 1:
                 if((f==0 && r>=n-1) || f==r+1){
-                    printf("queue overflow");
+                    printf("queue overflow \n");
                 }
                 else {
                     printf("enter element to be inserted: ");

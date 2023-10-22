@@ -52,6 +52,7 @@ int main()
 {
     int a[5] = {5,6,3,2,7};
     quicksort(a, 0, 4);
+    printf("Sorted Array: ");
     for (int i = 0; i < 5; i++)
     {
         printf("%d ", a[i]);

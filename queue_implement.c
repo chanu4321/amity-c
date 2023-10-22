@@ -18,6 +18,7 @@ int main() {
             case 1:
                 if(r>=n-1){
                     printf("queue overflow");
+                    break;
                 }
                 else {
                     printf("enter element to be inserted: ");
@@ -35,6 +36,7 @@ int main() {
             case 2:
                 if(f==-1){
                     printf("queue underflow");
+                    break;
                 }
                 else {
                     printf("%d \n",q[f]);

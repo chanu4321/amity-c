@@ -70,7 +70,8 @@ int main()
                 nn->data = d;
                 nn->next = temp->next;
                 temp->next = nn;
-                printf("element is inserted at the given location : %d \n", nn->data);
+                printf("element is inserted at the given location : %d \n", nn->data); 
+                // breaking unexpectedly
                 break;
             }
             break;
@@ -156,7 +157,7 @@ int main()
             scanf("%d",&d);
             for(temp=start,pos=0;temp!=NULL;temp=temp->next,pos++) {
                 if(temp->data==d) {
-                    printf("data found at location %d", pos);
+                    printf("data found at location %d \n", pos);
                     break;
                 }
             }

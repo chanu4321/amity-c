@@ -13,7 +13,7 @@ int main() {
     for(int i=0;i<n;i++){
         printf("%d ",a[i]);
     }
-/*
+
     int item,k;
     printf("enter item to be entered: ");
     scanf("%d",&item);
@@ -54,7 +54,7 @@ int main() {
         }
     }
 
-*/
+
     int b,m,e,item3,index;
     b=0;e=n-1;m=(b+e)/2;
     printf("enter item to be search: ");
@@ -71,6 +71,6 @@ int main() {
     if (a[m]==item3){
         printf("Element found at index: %d",m);
     }
-   
+ */  
     return 0;
 }

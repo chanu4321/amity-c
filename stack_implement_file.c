@@ -21,6 +21,7 @@ int main() {
     case 1:
         if (top>=n-1) {
             printf("stack overload\n");
+            break;
         }
         int push;
         printf("enter element to push: ");
@@ -32,6 +33,7 @@ int main() {
     case 2:
         if (top==-1) {
             printf("stack underflow\n");
+            break;
         }
 
         printf("element popped: %d\n",a[top]);
@@ -40,7 +42,7 @@ int main() {
     
     case 3:
         printf("cuurent stack elements: \n");
-        for(int i=0;i<top;i++){
+        for(int i=0;i<=top;i++){
             printf("%d ",a[i]);
         }
         break;
