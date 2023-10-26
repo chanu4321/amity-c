@@ -1,50 +1,49 @@
 #include <stdio.h>
-void swap(int *a, int left, int right)
+void swap(int *a, int start, int end)
 {
     int temp;
-    temp = a[left];
-    a[left] = a[right];
-    a[right] = temp;
+    temp = a[start];
+    a[start] = a[end];
+    a[end] = temp;
 }
-int partition(int *a, int low, int high)
+int partition(int *a, int lb, int ub)
 {
-    int left, right;
+    int start, end;
     int pivot_item;
-    pivot_item = a[low];
-    left = low;
-    right = high;
-    while (left < right)
+    pivot_item = a[lb];
+    start = lb;
+    end = ub;
+    while (start < end)
     {
-        /* Move left wile item < pivot */
-        while (a[left] <= pivot_item)
+        /* Move start wile item < pivot */
+        while (a[start] <= pivot_item)
         {
-            left++;
+            start++;
         }
-        /* Move right while item > pivot */
-        while (a[right] > pivot_item)
+        /* Move end while item > pivot */
+        while (a[end] > pivot_item)
         {
-            right--;
+            end--;
         }
-        if (left < right)
+        if (start < end)
         {
-            swap(a, left, right);
-            left++;
-            right--;
+            swap(a, start, end);
+            start++;
+            end--;
         }
     }
-    /* right is final position for the pivot */
-    a[low] = a[right];
-    a[right] = pivot_item;
-    return right;
+    /* end is final position for the pivot */
+    swap(a,lb,end);
+    return end;
 }
-void quicksort(int *a, int low, int high)
+void quicksort(int *a, int lb, int ub)
 {
     int pivot;
-    if (high >= low)
+    if (ub >= lb)
     {
-        pivot = partition(a, low, high);
-        quicksort(a, low, pivot-1);
-        quicksort(a, pivot+1, high);
+        pivot = partition(a, lb, ub);
+        quicksort(a, lb, pivot-1);
+        quicksort(a, pivot+1, ub);
     }
 }
 

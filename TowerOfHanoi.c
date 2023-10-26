@@ -14,6 +14,6 @@ int main()
     int n;
     printf("enter no. of disks: ");
     scanf("%d",&n);
-    toh(3,'A','B','C');
+    toh(n,'A','B','C');
     return 0;
 }
