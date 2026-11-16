@@ -6,6 +6,7 @@ void swap(int *a, int start, int end)
     a[start] = a[end];
     a[end] = temp;
 }
+
 int partition(int *a, int lb, int ub)
 {
     int start, end;
