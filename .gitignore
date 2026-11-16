@@ -1,5 +1,26 @@
+# Compiled binaries and build output
 *.exe
-*.vscode
-*tempCodeRunnerFile.c
+*.out
+a.out
+*.o
+*.obj
+*.pdb
+*.ilk
+
+# VS Code Code Runner scratch files
+tempCodeRunnerFile.*
+
+# Editor / IDE settings (machine-specific)
+.vscode/
+.idea/
+.zed/
+
+# OS clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+*.lnk
+
+# Personal scratch files kept out of the repo
 *practice.c
 *swap_using_pointers_func.c
